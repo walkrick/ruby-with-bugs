@@ -24,4 +24,8 @@ describe Bugs do
     expect(@bug.fish("Hawaii")).to eq("Humuhumunukunukuapua'a")
   end
 
+  it "should return an array with the states starting with a specific letter" do
+    expect(@bug.states("C")).to eq(["California", "Colorado"])
+  end
+
 end

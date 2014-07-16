@@ -15,13 +15,14 @@ class Bugs
     }
     @state_fish = {
       Hawaii: {name: "Humuhumunukunukuapua'a"},
-      Colorado: {name: "Greenback Cutthroat Trout"},
       California: {name: "Golden Trout"},
+      Colorado: {name: "Greenback Cutthroat Trout"},
       Utah: {name: "Bonneville Cutthroat Trout"},
       Wyoming: {name: "Cutthroat Trout"},
       South_Dakota: {name: "Walleye"},
       Nebraska: {name: "Channel Catfish"}
     }
+    @states = %w(Hawaii California Colorado Utah Wyoming South_Dakota Nebraska)
   end
 
   def greeting
@@ -42,6 +43,13 @@ class Bugs
 
   def fish(state)
     @state_fish[state]
+  end
+
+  def states(letter)
+    result = []
+    @states.each do |state|
+      result.pop(state) if state[0] == letter
+    end
   end
 
 end
