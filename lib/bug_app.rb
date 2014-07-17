@@ -42,7 +42,7 @@ class Bugs
   end
 
   def fish(state)
-    @state_fish[state][:name]
+    @state_fish[state.to_sym][:name]
   end
 
   def states(letter)
