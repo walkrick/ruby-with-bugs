@@ -13,6 +13,5 @@
 * inspect the stack trace 
 * inspect the rspec test
 * fix the bug in the bug_app.rb file
-	* there is a bug in one of the tests
 	* there is no need to edit the variables set in the initialize method
 * submit your repo when finished
