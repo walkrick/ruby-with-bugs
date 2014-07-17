@@ -26,30 +26,32 @@ class Bugs
   end
 
   def greeting
-    "Hi, my name is #{@users[:first_name]} #{@users[:last_name]}"
+    "Hi, my name is #{@user[:name][:first]} #{@user[:name][:last]}"
   end
 
   def street_address
-    "I live on #{@user["street"]}"
+    "I live on #{@user[:address][:street]}"
   end
 
   def state
-    "I live in #{@user[:state]}"
+    "I live in #{@user[:address]["state"]}"
   end
 
-  def zip
-    "My zipcode is #{@user[:zip]}"
+  def zip_code
+    "My zipcode is #{@user[:address][:zipcode]}"
   end
 
   def fish(state)
-    @state_fish[state]
+    @state_fish[state][:name]
   end
 
   def states(letter)
     result = []
     @states.each do |state|
-      result.pop(state) if state[0] == letter
+      result.push(state) if state[0] == letter
     end
+    result
   end
+
 
 end

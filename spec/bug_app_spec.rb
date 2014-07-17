@@ -21,7 +21,7 @@ describe Bugs do
   end
 
   it "should return the correct state fish" do
-    expect(@bug.fish("Hawaii")).to eq("Humuhumunukunukuapua'a")
+    expect(@bug.fish(:Hawaii)).to eq("Humuhumunukunukuapua'a")
   end
 
   it "should return an array with the states starting with a specific letter" do
